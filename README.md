@@ -1,15 +1,16 @@
 # vue2-template
 
-This template should help get you started developing with Vue 3 in Vite.
+```sh
+* vite+element-ui+axios+scss开箱即用
+* git clone url
+* git remote remove origin
+* 不要提交代码
+```
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
+## 环境
+```sh
+在env编写所需环境变量，使用 import.meta.env访问
+```
 ## Project Setup
 
 ```sh
