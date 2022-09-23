@@ -1,17 +1,17 @@
 import axios from 'axios'
 
 // 创建axios实例
-const $ = axios.create({
+const serve = axios.create({
   timeout: 1000 * 30,
-  // baseURL: import.meta.env.VITE_APP_API_URL,
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_APP_API_URL,
+  // baseURL: '/api',
   headers: {
     'Content-Type': 'application/json; charset=utf-8'
   }
 })
 
 // request拦截器
-service.interceptors.request.use(config => {
+serve.interceptors.request.use(config => {
   // 添加头
   // config.headers['xxx'] = ''
   return config
@@ -20,7 +20,7 @@ service.interceptors.request.use(config => {
 })
 
 // response拦截器
-service.interceptors.response.use(response => { // 401
+serve.interceptors.response.use(response => {
   if (response.data && response.data.code === 401) { // todo
   }
   return response
@@ -28,4 +28,4 @@ service.interceptors.response.use(response => { // 401
   return Promise.reject(error)
 })
 
-export default $
+export default serve

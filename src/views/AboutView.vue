@@ -7,6 +7,7 @@
 <script>
 import HelloWord from '../components/HelloWorld.vue'
 import Test from '@/components/Test.vue'
+import axiosA from '../api/index'
 
 export default {
   name: '',
@@ -28,8 +29,14 @@ export default {
   watch: {
 
   },
-  mounted() {
-
+  async mounted() {
+    try {
+      const data={}
+      let res = await axiosA(data)
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   },
   methods: {
 
