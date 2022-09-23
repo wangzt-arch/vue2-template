@@ -18,7 +18,14 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0', // 使用本机ip或者localhost启动服务
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: import.meta.env.VITE_APP_API_URL,
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '')
+      }
+    }
   }
 
 })

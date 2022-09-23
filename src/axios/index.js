@@ -3,7 +3,8 @@ import axios from 'axios'
 // 创建axios实例
 const $ = axios.create({
   timeout: 1000 * 30,
-  baseURL: import.meta.env.VITE_APP_API_URL,
+  // baseURL: import.meta.env.VITE_APP_API_URL,
+  baseURL: '/api',
   headers: {
     'Content-Type': 'application/json; charset=utf-8'
   }
