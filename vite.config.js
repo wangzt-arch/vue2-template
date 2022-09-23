@@ -15,5 +15,10 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    host: '0.0.0.0', // 使用本机ip或者localhost启动服务
+    open: true
   }
+
 })
