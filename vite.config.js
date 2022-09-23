@@ -18,16 +18,19 @@ export default defineConfig((({mode}) => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
-    server: { // 使用本机ip或者localhost启动服务
+    server: {
+      // 使用本机ip或者localhost启动服务
       host: '0.0.0.0',
-      open: true,
-      // proxy: {
-      // '/api': {
-      //     target: config.VITE_APP_API_URL,
-      //     changeOrigin: true,
-      //     rewrite: path => path.replace(/^\/api/, '')
-      // }
-      // }
+      cors: true, // 默认启用并允许任何源
+      open: true, // 在服务器启动时自动在浏览器中打开应用程序
+      port: 2180,
+      proxy: {
+        '/api': {
+          target: config.VITE_APP_API_URL,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
     }
   }
 }))
