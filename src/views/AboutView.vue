@@ -43,5 +43,5 @@ export default {
   }
 };
 </script>
-<style lang='' scoped>
+<style lang='scss' scoped>
 </style>

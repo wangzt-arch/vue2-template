@@ -32,5 +32,8 @@ export default {
   }
 };
 </script>
-<style lang='' scoped>
+<style lang='scss' scoped>
+.home {
+  color: $primary-color;
+}
 </style>
